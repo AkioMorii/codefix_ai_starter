@@ -1,0 +1,102 @@
+﻿id,categoria_esperada,categoria_prevista,acertou,entrada,resposta_modelo
+1,SyntaxError,SEM_CATEGORIA,0,"if idade >= 18
+    print(""maior"")","Erro: A condição `idade >= 18` está incorreta. O operador `>=` deve ser usado para comparar valores numéricos. A correção correta seria:
+
+```python
+if idade >= 18:
+    print(""maior ou igual a 18 anos"")
+```
+
+Aqui está a análise do erro e a correção:
+
+**Erro:** `idade >= 18`
+- A condição `idade >= 18` está incorreta porque `idade` é uma variável local e não está sendo usada na comparação.
+
+**Correção:** `idade >= 18`
+- A condição `idade >= 18` está corretamente comparando `idade` com `18`.
+
+**Causa:** A condição `idade >= 18` está incorreta porque `idade` é uma variável local e não está sendo usada na comparação.
+- A função `print()` pode ser usada para imprimir mensagens ou realizar outras tarefas dentro da função,"
+2,SyntaxError,SEM_CATEGORIA,0,"def quadrado(x)
+    return x*x",Erro: Definição incorreta do método `quadrado`. O método correto seria `def quadrado(x):` para definir a função que calcula o quadrado da entrada `x`.
+3,NameError,SEM_CATEGORIA,0,print(preco_final),"Erro: O código está incorretamente declarado. No Python, quando você usa `print()` para imprimir uma string ou outro tipo de dado, geralmente você deve usar a função `print()`. Portanto, o código correto seria:
+
+```python
+print(preco_final)
+```
+
+Aqui está o erro que você pode encontrar na sua análise:
+
+```python
+print(preco_final)
+```"
+4,NameError,SEM_CATEGORIA,0,total = quantidade * 2,"Erro: A expressão `quantidade * 2` está incorreta. O tipo correto para multiplicação é `int`, mas você está tentando multiplicar uma string por um número inteiro. Por favor, use `int(quantidade * 2)` ou `quantity * quantity`."
+5,TypeError,SEM_CATEGORIA,0,"print(""x"" * ""3"")","Erro: Exceção do tipo `TypeError` ocorreu ao tentar multiplicar a string `""x""` pelo número `3`. A correção correta seria:
+
+```python
+print(""x"" * 3)
+```
+
+Este código produzirá:
+
+```python
+x x x
+```"
+6,TypeError,SEM_CATEGORIA,0,soma = 5 + [1],"Erro: A função 'soma' está sendo usada para adicionar elementos ao endereço de memória do objeto 'soma', mas não foi definida como uma lista ou outra estrutura de dados que pode ser acessada diretamente. O código parece estar tentando fazer isso com a variável 'soma'. Por favor, verifique se você realmente quer usar essa expressão para somar dois números."
+7,IndexError,SEM_CATEGORIA,0,"itens=[10,20,30]
+print(itens[5])",Erro: Indexação fora do limite permitido (5). Correção: Apenas ação correta para a posição 4.
+8,IndexError,SEM_CATEGORIA,0,"dados=[1]
+print(dados[-2])","Erro: A função `print()` está sendo chamada no lugar do que deveria ser a função `len()`, que retorna o tamanho da lista.
+
+Correção: A função `print()` deve ser chamada após a verificação do tamanho da lista usando `len()`. O código correto seria:
+
+```python
+dados = [1]  # A lista vazia é representada por uma lista vazia []
+print(len(dados))  # Verifica o tamanho da lista
+print(dados[-2])  # Exibe os elementos da lista (de posição -2)
+```
+
+Aqui estão as categorias e corretoras do erro:
+- **Categoria:** Erro de programação
+- **Causa:** Falha na chamada da função `print()`
+- **Correção:** A função `print()` deve ser chamada após a verificação do tamanho da lista usando `len()`."
+9,KeyError,SEM_CATEGORIA,0,"usuario={""email"":""a@b.com""}
+print(usuario[""telefone""])","Erro: O objeto ""usuario"" está sendo acessado diretamente com o nome do atributo ""email"", mas deve ser usado como uma chave no dicionário.
+
+Correção: A chave correta para acessar os dados do usuário pelo email deve ser ""email"". Portanto, a correção seria:
+
+```python
+usuario = {""email"": ""a@b.com""}
+print(usuario[""email""])
+```
+
+Este código executará com sucesso e imprimirá:
+
+```
+a@b.com
+```"
+10,KeyError,SEM_CATEGORIA,0,"pontuacao={""A"":3}
+print(pontuacao[""B""])","Erro: A função print() está sendo usada para imprimir uma string na tela, mas a variável ""pontuacao"" está sendo acessada diretamente no código. Para corrigir esse erro, você deve usar a função print() para exibir os valores da lista ""pontuacao"". Aqui está o código correto:
+
+```python
+pontuacao = {""A"": 3}
+print(pontuacao[""B""])  # Exemplo de uso da função print()
+```
+
+Este código executará com sucesso e mostrará que a chave ""B"" está vazia (não existe) porque a chave ""B"" não foi definida na lista ""pontuacao""."
+11,ZeroDivisionError,SEM_CATEGORIA,0,"saldo=100
+parcelas=0
+print(saldo/parcelas)","Erro: Divisão por zero.
+
+Correção:
+
+```python
+saldo = 100
+parcelas = 0
+if parcelas != 0:
+    print(saldo / parcelas)
+else:
+    print(""Não é possível realizar a operação com parcelas igual a zero."")
+```"
+12,ZeroDivisionError,SEM_CATEGORIA,0,"divisor=len([])
+print(3/divisor)",Erro: Divisão por zero.

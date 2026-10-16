@@ -1,0 +1,46 @@
+﻿id,categoria_esperada,categoria_prevista,acertou,entrada,resposta_modelo
+1,SyntaxError,SyntaxError,1,"if idade >= 18
+    print(""maior"")","Categoria: SyntaxError
+Causa: A instruções `print` estão fora do bloco if.
+Correção: Adicionei a instrução `print`."
+2,SyntaxError,TypeError,0,"def quadrado(x)
+    return x*x","Categoria: TypeError
+Causa: O argumento 'x' deve ser uma função ou uma lista.
+Correção: Use `lambda x: x * x` para criar a função lambda ou use `map(lambda x: x * x, [1, 2])` para usar a função com múltiplos valores."
+3,NameError,SyntaxError,0,print(preco_final),"Categoria: SyntaxError
+Causa: A função print() está sendo usada sem que seja declarada.
+Correção: Declare a função print() com uma def para garantir que ela seja utilizada corretamente."
+4,NameError,SEM_CATEGORIA,0,total = quantidade * 2,"Categoria: Operação matemática.
+Causa: A multiplicação não pode ser aplicada diretamente à expressão total.
+Correção: `total = quantidade * (2 if quantidade > 0 else 1)`"
+5,TypeError,SyntaxError,0,"print(""x"" * ""3"")","Categoria: SyntaxError
+Causa: A expressão `x` * 3 deve ser uma string.
+Correção: Use `""x""` como argumento."
+6,TypeError,SyntaxError,0,soma = 5 + [1],"Categoria: SyntaxError
+Causa: A função 'soma' está incorretamente formatada para ser uma lista.
+Correção: Use a função 'sum' ou 'int' para somar os elementos da lista."
+7,IndexError,IndexError,1,"itens=[10,20,30]
+print(itens[5])","Categoria: IndexError
+Causa: O índice 5 está fora do limite permitido.
+Correção: A variável itens tem tamanho máximo de 2."
+8,IndexError,IndexError,1,"dados=[1]
+print(dados[-2])","Categoria: IndexError
+Causa: O índice -2 está fora do range.
+Correção: Utilize dados[0] para acessar a posição zero."
+9,KeyError,KeyError,1,"usuario={""email"":""a@b.com""}
+print(usuario[""telefone""])","Categoria: KeyError
+Causa: O dicionário ""usuario"" não contém uma chave chamada ""telefone"".
+Correção: Verifique se a chave existe antes de acessá-la."
+10,KeyError,KeyError,1,"pontuacao={""A"":3}
+print(pontuacao[""B""])","Categoria: KeyError
+Causa: A chave ""B"" não existe na lista.
+Correção: Use `pontuacao.get(""B"", 0)` para obter a posição da chave se ela existir."
+11,ZeroDivisionError,ZeroDivisionError,1,"saldo=100
+parcelas=0
+print(saldo/parcelas)","Categoria: ZeroDivisionError
+Causa: Divisão por zero.
+Correção: Verifique se parcelas for 0 antes da divisão."
+12,ZeroDivisionError,ZeroDivisionError,1,"divisor=len([])
+print(3/divisor)","Categoria: ZeroDivisionError
+Causa: Divisão por zero.
+Correção: Verifique se o divisor for 0 ou verifique a divisão com um número válido."

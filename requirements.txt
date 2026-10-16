@@ -1,0 +1,8 @@
+# PyTorch com CUDA é instalado separadamente conforme a GPU (README).
+transformers==5.19.0
+trl==1.15.0
+peft==0.21.2
+datasets>=4.0,<5
+accelerate>=1.0,<2
+bitsandbytes>=0.48,<1
+streamlit>=1.50,<2

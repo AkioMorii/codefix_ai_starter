@@ -1,0 +1,30 @@
+[
+  {
+    "modelo": "base",
+    "total": 12,
+    "acerto_explicito": 0,
+    "acerto_mencao_unica": 1,
+    "formato_completo": 0
+  },
+  {
+    "modelo": "e1",
+    "total": 12,
+    "acerto_explicito": 0,
+    "acerto_mencao_unica": 0,
+    "formato_completo": 11
+  },
+  {
+    "modelo": "e2",
+    "total": 12,
+    "acerto_explicito": 11,
+    "acerto_mencao_unica": 11,
+    "formato_completo": 12
+  },
+  {
+    "modelo": "e3",
+    "total": 12,
+    "acerto_explicito": 7,
+    "acerto_mencao_unica": 7,
+    "formato_completo": 12
+  }
+]

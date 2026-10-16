@@ -1,0 +1,251 @@
+﻿modelo,split,id,categoria_esperada,categoria_explicita,categoria_mencionada,acerto_explicito,acerto_mencao_unica,campos_completos,entrada,resposta_modelo,nota_causa_0_2,nota_correcao_0_2,observacoes
+base,val,1,SyntaxError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,"if idade >= 18
+    print(""maior"")","Erro: A condição `idade >= 18` está incorreta. O operador `>=` deve ser usado para comparar valores numéricos. A correção correta seria:
+
+```python
+if idade >= 18:
+    print(""maior ou igual a 18 anos"")
+```
+
+Aqui está a análise do erro e a correção:
+
+**Erro:** `idade >= 18`
+- A condição `idade >= 18` está incorreta porque `idade` é uma variável local e não está sendo usada na comparação.
+
+**Correção:** `idade >= 18`
+- A condição `idade >= 18` está corretamente comparando `idade` com `18`.
+
+**Causa:** A condição `idade >= 18` está incorreta porque `idade` é uma variável local e não está sendo usada na comparação.
+- A função `print()` pode ser usada para imprimir mensagens ou realizar outras tarefas dentro da função,",,,
+base,val,2,SyntaxError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,"def quadrado(x)
+    return x*x",Erro: Definição incorreta do método `quadrado`. O método correto seria `def quadrado(x):` para definir a função que calcula o quadrado da entrada `x`.,,,
+base,val,3,NameError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,print(preco_final),"Erro: O código está incorretamente declarado. No Python, quando você usa `print()` para imprimir uma string ou outro tipo de dado, geralmente você deve usar a função `print()`. Portanto, o código correto seria:
+
+```python
+print(preco_final)
+```
+
+Aqui está o erro que você pode encontrar na sua análise:
+
+```python
+print(preco_final)
+```",,,
+base,val,4,NameError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,total = quantidade * 2,"Erro: A expressão `quantidade * 2` está incorreta. O tipo correto para multiplicação é `int`, mas você está tentando multiplicar uma string por um número inteiro. Por favor, use `int(quantidade * 2)` ou `quantity * quantity`.",,,
+base,val,5,TypeError,SEM_CATEGORIA,TypeError,0,1,0,"print(""x"" * ""3"")","Erro: Exceção do tipo `TypeError` ocorreu ao tentar multiplicar a string `""x""` pelo número `3`. A correção correta seria:
+
+```python
+print(""x"" * 3)
+```
+
+Este código produzirá:
+
+```python
+x x x
+```",,,
+base,val,6,TypeError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,soma = 5 + [1],"Erro: A função 'soma' está sendo usada para adicionar elementos ao endereço de memória do objeto 'soma', mas não foi definida como uma lista ou outra estrutura de dados que pode ser acessada diretamente. O código parece estar tentando fazer isso com a variável 'soma'. Por favor, verifique se você realmente quer usar essa expressão para somar dois números.",,,
+base,val,7,IndexError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,"itens=[10,20,30]
+print(itens[5])",Erro: Indexação fora do limite permitido (5). Correção: Apenas ação correta para a posição 4.,,,
+base,val,8,IndexError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,"dados=[1]
+print(dados[-2])","Erro: A função `print()` está sendo chamada no lugar do que deveria ser a função `len()`, que retorna o tamanho da lista.
+
+Correção: A função `print()` deve ser chamada após a verificação do tamanho da lista usando `len()`. O código correto seria:
+
+```python
+dados = [1]  # A lista vazia é representada por uma lista vazia []
+print(len(dados))  # Verifica o tamanho da lista
+print(dados[-2])  # Exibe os elementos da lista (de posição -2)
+```
+
+Aqui estão as categorias e corretoras do erro:
+- **Categoria:** Erro de programação
+- **Causa:** Falha na chamada da função `print()`
+- **Correção:** A função `print()` deve ser chamada após a verificação do tamanho da lista usando `len()`.",,,
+base,val,9,KeyError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,"usuario={""email"":""a@b.com""}
+print(usuario[""telefone""])","Erro: O objeto ""usuario"" está sendo acessado diretamente com o nome do atributo ""email"", mas deve ser usado como uma chave no dicionário.
+
+Correção: A chave correta para acessar os dados do usuário pelo email deve ser ""email"". Portanto, a correção seria:
+
+```python
+usuario = {""email"": ""a@b.com""}
+print(usuario[""email""])
+```
+
+Este código executará com sucesso e imprimirá:
+
+```
+a@b.com
+```",,,
+base,val,10,KeyError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,"pontuacao={""A"":3}
+print(pontuacao[""B""])","Erro: A função print() está sendo usada para imprimir uma string na tela, mas a variável ""pontuacao"" está sendo acessada diretamente no código. Para corrigir esse erro, você deve usar a função print() para exibir os valores da lista ""pontuacao"". Aqui está o código correto:
+
+```python
+pontuacao = {""A"": 3}
+print(pontuacao[""B""])  # Exemplo de uso da função print()
+```
+
+Este código executará com sucesso e mostrará que a chave ""B"" está vazia (não existe) porque a chave ""B"" não foi definida na lista ""pontuacao"".",,,
+base,val,11,ZeroDivisionError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,"saldo=100
+parcelas=0
+print(saldo/parcelas)","Erro: Divisão por zero.
+
+Correção:
+
+```python
+saldo = 100
+parcelas = 0
+if parcelas != 0:
+    print(saldo / parcelas)
+else:
+    print(""Não é possível realizar a operação com parcelas igual a zero."")
+```",,,
+base,val,12,ZeroDivisionError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,"divisor=len([])
+print(3/divisor)",Erro: Divisão por zero.,,,
+e1,val,1,SyntaxError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"if idade >= 18
+    print(""maior"")","Categoria: Erro
+Causa: Estrutura condicional com uma condição falsa (idade >= 18)
+Correção: A condição deve ser declarada dentro do bloco if ou pode ser declarada diretamente no código. No caso acima, seria melhor declará-la fora do bloco:
+
+```python
+if idade >= 18:
+    print(""maior"")
+```
+
+Aqui está a versão corrigida:
+
+```python
+if idade >= 18:
+    print(""maior"")
+```",,,
+e1,val,2,SyntaxError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"def quadrado(x)
+    return x*x","Categoria: Definição de Funções
+Causa: Falha na definição da função
+Correção: A função deve ser definida como `def quadrado(x):`",,,
+e1,val,3,NameError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,0,print(preco_final),"Categoria: Erro, Causa: Não foi possível acessar a variável 'preco_final' na função 'print', Correção: Certifique-se de que a variável está correta ou verifique se há algum problema com a estrutura do código.",,,
+e1,val,4,NameError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,total = quantidade * 2,"Categoria: Erro de Programação
+Causa: A divisão por zero ocorreu.
+Correção: Deve ser usado `total = quantidade * 2` para evitar esse erro.",,,
+e1,val,5,TypeError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"print(""x"" * ""3"")","Categoria: Erro de Expressão Matemática
+Causa: A expressão `x` * 3 não pode ser realizada com a operação de multiplicação.
+Correção: A expressão deve ser escrita como `x * x * x`.",,,
+e1,val,6,TypeError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,soma = 5 + [1],"Categoria: Erro de Expressão Matemática
+Causa: A expressão `[1]` está incorretamente formatada como uma lista.
+Correção: `soma = 5 + 1`",,,
+e1,val,7,IndexError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"itens=[10,20,30]
+print(itens[5])","Categoria: Erro
+Causa: O índice 5 está fora do limite permitido para a lista.
+Correção: A lista deve ser formatada como [10, 20, 30].",,,
+e1,val,8,IndexError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"dados=[1]
+print(dados[-2])","Categoria: Erro
+Causa: O operador negativo (-) não pode ser usado com uma lista vazia.
+Correção: A função print() deve ser usada para imprimir os elementos da lista, como:
+
+```python
+print(dados[0])  # Imprime a primeira posição do array
+```",,,
+e1,val,9,KeyError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"usuario={""email"":""a@b.com""}
+print(usuario[""telefone""])","Categoria: Erro de Exceções
+Causa: O objeto ""usuario"" não possui uma chave ""telefone"".
+Correção: A variável ""usuario"" deve ter a chave ""telefone"".",,,
+e1,val,10,KeyError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"pontuacao={""A"":3}
+print(pontuacao[""B""])","Categoria: Erro
+Causa: O código está incorretamente formatado para usar colchetes ([]) para acessar os elementos do dicionário.
+Correção: `print(pontuacao['B'])`",,,
+e1,val,11,ZeroDivisionError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"saldo=100
+parcelas=0
+print(saldo/parcelas)","Categoria: Erro
+Causa: Divisão por zero
+Correção: O cálculo da parcela deve ser maior que zero para evitar divisão por zero.",,,
+e1,val,12,ZeroDivisionError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,"divisor=len([])
+print(3/divisor)","Categoria: Erro
+Causa: Divisão por zero
+Correção: Dividindo pelo divisor antes do cálculo da divisão.",,,
+e2,val,1,SyntaxError,SyntaxError,SyntaxError,1,1,1,"if idade >= 18
+    print(""maior"")","Categoria: SyntaxError
+Causa: A instruções `print` estão fora do bloco if.
+Correção: Adicionei a instrução `print`.",,,
+e2,val,2,SyntaxError,TypeError,TypeError,0,0,1,"def quadrado(x)
+    return x*x","Categoria: TypeError
+Causa: O argumento deve ser uma string.
+Correção: Use `x` como string literal.",,,
+e2,val,3,NameError,NameError,NameError,1,1,1,print(preco_final),"Categoria: NameError
+Causa: `preco_final` não foi declarado.
+Correção: Defina `preco_final` antes do print ou use `float()` para converter string para float.",,,
+e2,val,4,NameError,NameError,NameError,1,1,1,total = quantidade * 2,"Categoria: NameError
+Causa: A variável 'quantidade' não foi declarada.
+Correção: `import sys; print(sys.exc_info()[0])`",,,
+e2,val,5,TypeError,TypeError,TypeError,1,1,1,"print(""x"" * ""3"")","Categoria: TypeError
+Causa: O operador '*' deve ser usado com uma string.
+Correção: `print(""x"" * 3)`",,,
+e2,val,6,TypeError,TypeError,TypeError,1,1,1,soma = 5 + [1],"Categoria: TypeError
+Causa: A lista deve ser uma tupla.
+Correção: Use `int` ou `float`.",,,
+e2,val,7,IndexError,IndexError,IndexError,1,1,1,"itens=[10,20,30]
+print(itens[5])","Categoria: IndexError
+Causa: O índice 5 está fora do limite permitido.
+Correção: A variável itens tem tamanho mínimo de 1.",,,
+e2,val,8,IndexError,IndexError,IndexError,1,1,1,"dados=[1]
+print(dados[-2])","Categoria: IndexError
+Causa: O índice -2 está fora do range.
+Correção: Use dados[0] ou dados[:].append(1).",,,
+e2,val,9,KeyError,KeyError,KeyError,1,1,1,"usuario={""email"":""a@b.com""}
+print(usuario[""telefone""])","Categoria: KeyError
+Causa: O objeto ""usuario"" não contém uma chave chamada ""telefone"".
+Correção: Verifique se a chave existe antes de acessá-la.",,,
+e2,val,10,KeyError,KeyError,KeyError,1,1,1,"pontuacao={""A"":3}
+print(pontuacao[""B""])","Categoria: KeyError
+Causa: A chave ""B"" não existe na lista.
+Correção: Verifique se a chave está correta ou use uma lista diferente.",,,
+e2,val,11,ZeroDivisionError,ZeroDivisionError,ZeroDivisionError,1,1,1,"saldo=100
+parcelas=0
+print(saldo/parcelas)","Categoria: ZeroDivisionError
+Causa: Divisão por zero.
+Correção: Verifique se parcelas for 0 antes da divisão.",,,
+e2,val,12,ZeroDivisionError,ZeroDivisionError,ZeroDivisionError,1,1,1,"divisor=len([])
+print(3/divisor)","Categoria: ZeroDivisionError.
+Causa: Divisão por zero ocorreu.
+Correção: Verifique se `len([])` for 0 antes da divisão.",,,
+e3,val,1,SyntaxError,SyntaxError,SyntaxError,1,1,1,"if idade >= 18
+    print(""maior"")","Categoria: SyntaxError
+Causa: A instruções `print` estão fora do bloco if.
+Correção: Adicionei a instrução `print`.",,,
+e3,val,2,SyntaxError,TypeError,TypeError,0,0,1,"def quadrado(x)
+    return x*x","Categoria: TypeError
+Causa: O argumento 'x' deve ser uma função ou uma lista.
+Correção: Use `lambda x: x * x` para criar a função lambda ou use `map(lambda x: x * x, [1, 2])` para usar a função com múltiplos valores.",,,
+e3,val,3,NameError,SyntaxError,SyntaxError,0,0,1,print(preco_final),"Categoria: SyntaxError
+Causa: A função print() está sendo usada sem que seja declarada.
+Correção: Declare a função print() com uma def para garantir que ela seja utilizada corretamente.",,,
+e3,val,4,NameError,SEM_CATEGORIA,NAO_MENCIONADA,0,0,1,total = quantidade * 2,"Categoria: Operação matemática.
+Causa: A multiplicação não pode ser aplicada diretamente à expressão total.
+Correção: `total = quantidade * (2 if quantidade > 0 else 1)`",,,
+e3,val,5,TypeError,SyntaxError,SyntaxError,0,0,1,"print(""x"" * ""3"")","Categoria: SyntaxError
+Causa: A expressão `x` * 3 deve ser uma string.
+Correção: Use `""x""` como argumento.",,,
+e3,val,6,TypeError,SyntaxError,SyntaxError,0,0,1,soma = 5 + [1],"Categoria: SyntaxError
+Causa: A função 'soma' está incorretamente formatada para ser uma lista.
+Correção: Use a função 'sum' ou 'int' para somar os elementos da lista.",,,
+e3,val,7,IndexError,IndexError,IndexError,1,1,1,"itens=[10,20,30]
+print(itens[5])","Categoria: IndexError
+Causa: O índice 5 está fora do limite permitido.
+Correção: A variável itens tem tamanho máximo de 2.",,,
+e3,val,8,IndexError,IndexError,IndexError,1,1,1,"dados=[1]
+print(dados[-2])","Categoria: IndexError
+Causa: O índice -2 está fora do range.
+Correção: Utilize dados[0] para acessar a posição zero.",,,
+e3,val,9,KeyError,KeyError,KeyError,1,1,1,"usuario={""email"":""a@b.com""}
+print(usuario[""telefone""])","Categoria: KeyError
+Causa: O dicionário ""usuario"" não contém uma chave chamada ""telefone"".
+Correção: Verifique se a chave existe antes de acessá-la.",,,
+e3,val,10,KeyError,KeyError,KeyError,1,1,1,"pontuacao={""A"":3}
+print(pontuacao[""B""])","Categoria: KeyError
+Causa: A chave ""B"" não existe na lista.
+Correção: Use `pontuacao.get(""B"", 0)` para obter a posição da chave se ela existir.",,,
+e3,val,11,ZeroDivisionError,ZeroDivisionError,ZeroDivisionError,1,1,1,"saldo=100
+parcelas=0
+print(saldo/parcelas)","Categoria: ZeroDivisionError
+Causa: Divisão por zero.
+Correção: Verifique se parcelas for 0 antes da divisão.",,,
+e3,val,12,ZeroDivisionError,ZeroDivisionError,ZeroDivisionError,1,1,1,"divisor=len([])
+print(3/divisor)","Categoria: ZeroDivisionError
+Causa: Divisão por zero.
+Correção: Verifique se o divisor for 0 ou verifique a divisão com um número válido.",,,

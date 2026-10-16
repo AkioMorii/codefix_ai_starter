@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+models/*
+!models/.gitkeep
+.env
+*.safetensors
+*.bin
+*.gguf
+# Arquivos internos do Visual Studio
+.vs/
+*.vsidx

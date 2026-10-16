@@ -1,0 +1,8 @@
+{
+  "experimento": "e2",
+  "split": "val",
+  "total": 12,
+  "acertos": 11,
+  "acuracia": 0.9166666666666666,
+  "csv": "resultados\\e2_val.csv"
+}

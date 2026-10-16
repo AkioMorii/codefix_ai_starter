@@ -1,0 +1,46 @@
+﻿id,categoria_esperada,categoria_prevista,acertou,entrada,resposta_modelo
+1,SyntaxError,SyntaxError,1,"if idade >= 18
+    print(""maior"")","Categoria: SyntaxError
+Causa: A instruções `print` estão fora do bloco if.
+Correção: Adicionei a instrução `print`."
+2,SyntaxError,TypeError,0,"def quadrado(x)
+    return x*x","Categoria: TypeError
+Causa: O argumento deve ser uma string.
+Correção: Use `x` como string literal."
+3,NameError,NameError,1,print(preco_final),"Categoria: NameError
+Causa: `preco_final` não foi declarado.
+Correção: Defina `preco_final` antes do print ou use `float()` para converter string para float."
+4,NameError,NameError,1,total = quantidade * 2,"Categoria: NameError
+Causa: A variável 'quantidade' não foi declarada.
+Correção: `import sys; print(sys.exc_info()[0])`"
+5,TypeError,TypeError,1,"print(""x"" * ""3"")","Categoria: TypeError
+Causa: O operador '*' deve ser usado com uma string.
+Correção: `print(""x"" * 3)`"
+6,TypeError,TypeError,1,soma = 5 + [1],"Categoria: TypeError
+Causa: A lista deve ser uma tupla.
+Correção: Use `int` ou `float`."
+7,IndexError,IndexError,1,"itens=[10,20,30]
+print(itens[5])","Categoria: IndexError
+Causa: O índice 5 está fora do limite permitido.
+Correção: A variável itens tem tamanho mínimo de 1."
+8,IndexError,IndexError,1,"dados=[1]
+print(dados[-2])","Categoria: IndexError
+Causa: O índice -2 está fora do range.
+Correção: Use dados[0] ou dados[:].append(1)."
+9,KeyError,KeyError,1,"usuario={""email"":""a@b.com""}
+print(usuario[""telefone""])","Categoria: KeyError
+Causa: O objeto ""usuario"" não contém uma chave chamada ""telefone"".
+Correção: Verifique se a chave existe antes de acessá-la."
+10,KeyError,KeyError,1,"pontuacao={""A"":3}
+print(pontuacao[""B""])","Categoria: KeyError
+Causa: A chave ""B"" não existe na lista.
+Correção: Verifique se a chave está correta ou use uma lista diferente."
+11,ZeroDivisionError,ZeroDivisionError,1,"saldo=100
+parcelas=0
+print(saldo/parcelas)","Categoria: ZeroDivisionError
+Causa: Divisão por zero.
+Correção: Verifique se parcelas for 0 antes da divisão."
+12,ZeroDivisionError,ZeroDivisionError,1,"divisor=len([])
+print(3/divisor)","Categoria: ZeroDivisionError.
+Causa: Divisão por zero ocorreu.
+Correção: Verifique se `len([])` for 0 antes da divisão."

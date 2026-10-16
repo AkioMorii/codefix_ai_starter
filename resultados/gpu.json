@@ -1,0 +1,16 @@
+{
+  "data_utc": "2026-10-15T23:38:00.866336+00:00",
+  "torch": "2.11.0+cu128",
+  "cuda_runtime_pytorch": "12.8",
+  "cuda_disponivel": true,
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "capability": [
+    8,
+    6
+  ],
+  "vram_gb": 4.0,
+  "teste_tensor_gpu": [
+    4.0,
+    6.0
+  ]
+}

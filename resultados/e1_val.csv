@@ -1,0 +1,60 @@
+﻿id,categoria_esperada,categoria_prevista,acertou,entrada,resposta_modelo
+1,SyntaxError,SEM_CATEGORIA,0,"if idade >= 18
+    print(""maior"")","Categoria: Erro
+Causa: Estrutura condicional com uma condição falsa (idade >= 18)
+Correção: A condição deve ser declarada dentro do bloco if ou pode ser declarada diretamente no código. No caso acima, seria melhor declará-la fora do bloco:
+
+```python
+if idade >= 18:
+    print(""maior"")
+```
+
+Aqui está a versão corrigida:
+
+```python
+if idade >= 18:
+    print(""maior"")
+```"
+2,SyntaxError,SEM_CATEGORIA,0,"def quadrado(x)
+    return x*x","Categoria: Definição de Funções
+Causa: Falha na definição da função
+Correção: A função deve ser definida como `def quadrado(x):`"
+3,NameError,SEM_CATEGORIA,0,print(preco_final),"Categoria: Erro, Causa: Não foi possível acessar a variável 'preco_final' na função 'print', Correção: Certifique-se de que a variável está correta ou verifique se há algum problema com a estrutura do código."
+4,NameError,SEM_CATEGORIA,0,total = quantidade * 2,"Categoria: Erro de Programação
+Causa: A divisão por zero ocorreu.
+Correção: Deve ser usado `total = quantidade * 2` para evitar esse erro."
+5,TypeError,SEM_CATEGORIA,0,"print(""x"" * ""3"")","Categoria: Erro de Expressão Matemática
+Causa: A expressão `x` * 3 não pode ser realizada com a operação de multiplicação.
+Correção: A expressão deve ser escrita como `x * x * x`."
+6,TypeError,SEM_CATEGORIA,0,soma = 5 + [1],"Categoria: Erro de Expressão Matemática
+Causa: A expressão `[1]` está incorretamente formatada como uma lista.
+Correção: `soma = 5 + 1`"
+7,IndexError,SEM_CATEGORIA,0,"itens=[10,20,30]
+print(itens[5])","Categoria: Erro
+Causa: O índice 5 está fora do limite permitido para a lista.
+Correção: A lista deve ser formatada como [10, 20, 30]."
+8,IndexError,SEM_CATEGORIA,0,"dados=[1]
+print(dados[-2])","Categoria: Erro
+Causa: O operador negativo (-) não pode ser usado com uma lista vazia.
+Correção: A função print() deve ser usada para imprimir os elementos da lista, como:
+
+```python
+print(dados[0])  # Imprime a primeira posição do array
+```"
+9,KeyError,SEM_CATEGORIA,0,"usuario={""email"":""a@b.com""}
+print(usuario[""telefone""])","Categoria: Erro de Exceções
+Causa: O objeto ""usuario"" não possui uma chave ""telefone"".
+Correção: A variável ""usuario"" deve ter a chave ""telefone""."
+10,KeyError,SEM_CATEGORIA,0,"pontuacao={""A"":3}
+print(pontuacao[""B""])","Categoria: Erro
+Causa: O código está incorretamente formatado para usar colchetes ([]) para acessar os elementos do dicionário.
+Correção: `print(pontuacao['B'])`"
+11,ZeroDivisionError,SEM_CATEGORIA,0,"saldo=100
+parcelas=0
+print(saldo/parcelas)","Categoria: Erro
+Causa: Divisão por zero
+Correção: O cálculo da parcela deve ser maior que zero para evitar divisão por zero."
+12,ZeroDivisionError,SEM_CATEGORIA,0,"divisor=len([])
+print(3/divisor)","Categoria: Erro
+Causa: Divisão por zero
+Correção: Dividindo pelo divisor antes do cálculo da divisão."
