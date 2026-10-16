@@ -1,5 +1,11 @@
 # CodeFix AI — Engenharia de IA Generativa
 
+Membros:
+David de Medeiros Pacheco Junior- RM551462 
+Kaique Maia Reis Silva- RM552112
+Orlando Akio Morii Cardoso- RM98067
+Pedro Henrique Alves Guariente- RM550301 
+
 **Projeto:** análise e sugestões de correção para erros em código Python por uma LLM local.
 
 **LLM base:** [Qwen2.5-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct) (modelo existente, adaptado; não foi treinado do zero).  
@@ -89,7 +95,7 @@ python -m streamlit run app.py
 
 Abrir `http://localhost:8501`, selecionar original ou E1/E2/E3, colar código e clicar **Analisar erro**. O modelo e seus adaptadores devem estar presentes localmente. `localhost` não oferece hospedagem pública.
 
-## Estrutura e artefatos
+## Estrutura
 
 - `scripts/` — inferência, treinamento, avaliação e inspeção da GPU
 - `data/` — dados separados em treino, validação e teste
@@ -100,19 +106,3 @@ Abrir `http://localhost:8501`, selecionar original ou E1/E2/E3, colar código e 
 - `docs/GUIA_ENTREGA.md` — checklist final e GitHub
 
 Os pesos completos do Qwen são baixados do Hugging Face. Os adaptadores LoRA treinados não estão incluídos neste repositório por padrão. **Para demonstrar em outra máquina**, disponibilize os adaptadores por meio de um armazenamento adequado ou reproduza os comandos de treinamento; sem os adaptadores, apenas o modelo original poderá ser executado.
-
-## Limitações e boas práticas
-
-- Apenas 72 exemplos, com estilo repetitivo: alto risco de generalização limitada.
-- Uma loss menor não significa uma correção de código válida.
-- Não executar trechos de código arbitrários enviados pelo usuário nem sugestões sem revisão.
-- Não expor credenciais, `.env`, cache, `.venv` ou pesos do modelo no GitHub.
-- Registrar versões instaladas com `python -m pip freeze > docs/ambiente_instalado.txt`.
-- Tirar pelo menos um print **dentro do VS Code**, pois o enunciado exige isso. Prints do Visual Studio documentam o funcionamento, mas não satisfazem literalmente a parte sobre VS Code.
-
-## Referências
-
-- https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
-- https://huggingface.co/docs/trl/sft_trainer
-- https://huggingface.co/docs/transformers/quantization/bitsandbytes
-- https://pytorch.org/get-started/locally/
